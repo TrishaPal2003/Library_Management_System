@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Member</title>
+    <link rel="stylesheet" href="{% static 'library/css/form.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Add Member</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+
+    <a href="{% url 'member_list' %}">Back to members</a>
+</div>
+
+</body>
+</html>

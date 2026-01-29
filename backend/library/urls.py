@@ -1,15 +1,23 @@
 from django.urls import path
-from . import views
+from .views.bookcreate import BookCreateView
+from .views.booklist import BookListView
+from .views.borrowhistory import BorrowHistoryView
+from .views.issuebook import IssueBookView
+from .views.membercreate import MemberCreateView
+from .views.memberlist import MemberListView
+from .views.returnbook import ReturnBookView
+from .views.home import home
 
 urlpatterns = [
-    # path('books/', views.book_list, name='book_list'),
-    # path('books/add/', views.add_book, name='add_book'),
+    path('', home, name='home'),
+    path('books/', BookListView.as_view(), name='book_list'),
+    path('books/add/', BookCreateView.as_view(), name='add_book'),
 
-    # path('members/', views.member_list, name='member_list'),
-    # path('members/add/', views.add_member, name='add_member'),
+    path('members/', MemberListView.as_view(), name='member_list'),
+    path('members/add/', MemberCreateView.as_view(), name='add_member'),
 
-    # path('issue/', views.issue_book, name='issue_book'),
-    # path('return/<int:record_id>/', views.return_book, name='return_book'),
+    path('issue/', IssueBookView.as_view(), name='issue_book'),
+    path('return/<int:record_id>/', ReturnBookView.as_view(), name='return_book'),
 
-    # path('history/', views.borrow_history, name='borrow_history'),
+    path('history/', BorrowHistoryView.as_view(), name='borrow_history'),
 ]

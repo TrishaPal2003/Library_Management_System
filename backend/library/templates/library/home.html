@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="{% static 'library/css/form.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Library Management System</h2>
+    
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+        <a href="{% url 'book_list' %}" class="add-btn">📚 View Books</a>
+        <a href="{% url 'member_list' %}" class="add-btn">👥 View Members</a>
+        <a href="{% url 'issue_book' %}" class="add-btn">📖 Issue Book</a>
+        <a href="{% url 'borrow_history' %}" class="add-btn">🕒 Borrow History</a>
+    </div>
+</div>
+
+</body>
+</html>
