@@ -1,0 +1,186 @@
+/* ===============================
+   Global Reset & Base
+================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* ===============================
+   Layout Container
+================================ */
+
+.container {
+    max-width: 900px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 30px 35px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   Headings & Headers
+================================ */
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* ===============================
+   Buttons & Links
+================================ */
+
+button,
+.add-btn,
+.action-btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover,
+.add-btn:hover,
+.action-btn:hover {
+    background-color: #1e40af;
+}
+
+.add-btn {
+    background-color: #16a34a;
+}
+
+.add-btn:hover {
+    background-color: #15803d;
+}
+
+/* ===============================
+   Forms
+================================ */
+
+form p {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #374151;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ===============================
+   Tables
+================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #ffffff;
+}
+
+th {
+    text-align: left;
+    padding: 12px;
+    background-color: #f9fafb;
+    color: #111827;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+td {
+    padding: 12px;
+    font-size: 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tr:hover {
+    background-color: #f3f4f6;
+}
+
+/* ===============================
+   Status Indicators
+================================ */
+
+.status-issued {
+    color: #b91c1c;
+    font-weight: 600;
+}
+
+.status-returned {
+    color: #15803d;
+    font-weight: 600;
+}
+
+/* ===============================
+   Empty State
+================================ */
+
+td[colspan] {
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* ===============================
+   Footer Links
+================================ */
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
